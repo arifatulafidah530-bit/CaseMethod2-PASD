@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main06 {
-     public static void main(String[] args) {
+         public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         // membuat object Linked List antrean 
@@ -21,6 +21,7 @@ public class Main06 {
             System.out.println("2. Cetak Antrian");
             System.out.println("3. Hapus Antrian dan Pesan");
             System.out.println("4. Laporan Pesanan");
+            System.out.println("5. Cetak Antrean Terbalik");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu : ");
 
@@ -96,15 +97,15 @@ public class Main06 {
                     break;
                 // MENU LAPORAN PESANAN
                 case 4:
-
                     pesanan.print();
-
+                    break;
+                // MENU CETAK TERBALIK
+                case 5:
+                    antrian.cetakTerbalik();
                     break;
                 // MENU KELUAR
                 case 0:
-
                     System.out.println("Program selesai");
-
                     break;
 
                 default:
