@@ -82,6 +82,33 @@ public class DLLPembeli06 {
             current = current.next;
         }
     }
+    // Method Cetak terbalik
+    // menampilkan antrean dari belakang ke depan
+    public void cetakTerbalik() {
+    // cek apakah list kosong
+    if (isEmpty()) {
+        System.out.println("Antrian kosong");
+        return;
+    }
+    // traversal dimulai dari tail
+    NodePembeli06 current = tail;
+
+    System.out.println("=================================");
+    System.out.println("Daftar Antrian Terbalik");
+    System.out.println("=================================");
+    System.out.printf("%-10s %-15s %-15s\n",
+            "No", "Nama", "No HP");
+
+    // traversal mundur menggunakan prev
+    while (current != null) {
+        System.out.printf("%-10d %-15s %-15s\n",
+                current.data.noAntrian,
+                current.data.namaPembeli,
+                current.data.noHp);
+        // pindah ke node sebelumnya
+        current = current.prev;
+    }
+}
 
     // menghapus data berdasarkan nomor antrean
     public Pembeli06 remove(int noAntrian) {
